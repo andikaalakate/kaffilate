@@ -1,0 +1,180 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  // border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+
+  & .navbar-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    font-style: italic;
+
+    & span {
+      color: var(--primary);
+    }
+  }
+
+  & .navbar-nav {
+    & a {
+      color: white;
+      display: inline-block;
+      font-size: 1.3rem;
+      margin: 0 1rem;
+      transition: all 0.5s;
+
+      &.active {
+        color: var(--primary);
+      }
+
+      &:hover {
+        color: var(--primary);
+
+        &::after {
+          transform: scaleX(0.5);
+        }
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        padding-bottom: 0.5rem;
+        border-bottom: 0.1rem solid var(--primary);
+        transform: scaleX(0);
+        transition: 0.2s linear;
+      }
+    }
+  }
+
+  & .navbar-extra {
+    display: flex;
+    align-items: center;
+
+    & #shopping-button.active {
+      color: var(--primary);
+    }
+
+    & #search-button.active {
+      color: var(--primary);
+    }
+
+    & #hamburger-menu.active {
+      color: var(--primary);
+    }
+
+    & a {
+      color: white;
+      margin: 0 0.5rem;
+      transition: color 0.5s;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+
+  & .search-form {
+    position: absolute;
+    top: 100%;
+    right: 7%;
+    background-color: white;
+    width: 35rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: all 0.5s;
+
+    &.active {
+      transform: scaleY(1);
+    }
+
+    & input {
+      height: 100%;
+      width: 100%;
+      font-size: 1.2rem;
+      color: var(--bg);
+      padding: 0.75rem;
+    }
+
+    & label {
+      cursor: pointer;
+      font-size: 1.5rem;
+      margin-right: 1.5rem;
+      color: var(--bg);
+    }
+  }
+
+  & .shopping-cart {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: 100vh;
+    width: 35rem;
+    padding: 0 1.5rem;
+    color: white;
+    background-image: linear-gradient(
+        to right,
+        rgb(0 0 0 / 0.5),
+        rgb(0 0 0 / 0.5)
+      ),
+      url("/img/robert.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.5s linear;
+
+    &.active {
+      right: 0;
+    }
+
+    & .cart-item {
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed #fefefe;
+      position: relative;
+
+      & img {
+        height: 10rem;
+        border-radius: 50%;
+      }
+
+      & .item-detail {
+        & h3 {
+          font-size: 1.6rem;
+          padding-bottom: 0.5rem;
+        }
+        & .item-price {
+          font-size: 1.3rem;
+          color: #fdfdfd;
+        }
+      }
+      & .remove-item {
+        position: absolute;
+        right: 1rem;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        &:hover {
+          color: var(--primary);
+        }
+      }
+    }
+  }
+}
+
+#hamburger-menu {
+  display: none;
+}

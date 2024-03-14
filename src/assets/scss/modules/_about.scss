@@ -1,0 +1,33 @@
+/* About Section */
+.about {
+  .row {
+    display: flex;
+    .about-img {
+      flex: 1 1 45rem;
+      & img {
+        width: 100%;
+        mask-image: url("/img/mask/3.svg");
+        mask-size: 100%;
+        mask-repeat: no-repeat;
+        mask-position: center;
+      }
+    }
+
+    .content {
+      flex: 1 1 35rem;
+      padding: 0 1rem;
+
+      & h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+      }
+
+      & p {
+        margin-bottom: 0.8rem;
+        font-size: 1.4rem;
+        font-weight: 200;
+        line-height: 1.6;
+      }
+    }
+  }
+}

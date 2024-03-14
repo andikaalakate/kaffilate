@@ -1,0 +1,43 @@
+/* Footer */
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 1rem 3rem;
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  & .socials {
+    padding: 1rem 0;
+
+    & a {
+      color: #fff;
+      margin: 1rem;
+      transition: color .3s;
+
+      &:hover {
+        color: var(--bg);
+      }
+    }
+  }
+
+  & .links {
+    margin-bottom: 1.4rem;
+
+    & a {
+      color: #fff;
+      padding: 0.7rem 1rem;
+      transition: color .3s;
+
+      &:hover {
+        color: var(--bg);
+      }
+    }
+  }
+
+  & .credit {
+    font-size: 0.8rem;
+
+    & a {
+      color: var(--bg);
+    }
+  }
+}

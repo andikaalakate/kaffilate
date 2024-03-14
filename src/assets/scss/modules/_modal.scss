@@ -1,0 +1,73 @@
+/* Modal Box */
+
+/* Modal Animation */
+@keyframes animateModal {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* Item Detail */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.75);
+
+  & .modal-container {
+    position: relative;
+    background-color: #fefefe;
+    color: var(--bg);
+    margin: 15% auto;
+    padding: 1.2rem;
+    border: 1px solid #666;
+    width: 80%;
+    animation: animateModal .5s;
+
+    & .close-icon {
+      position: absolute;
+      right: 1rem;
+    }
+
+    & .modal-content {
+      display: flex;
+      flex-wrap: nowrap;
+
+      & img {
+        height: 23rem;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+      }
+
+      & .product-content {
+        & p {
+          font-size: 1.2rem;
+          line-height: 1.8rem;
+          margin-top: 1.2rem;
+        }
+
+        & a {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          width: 12rem;
+          background-color: var(--primary);
+          color: #fff;
+          margin-top: 1rem;
+          padding: 1rem 1.6rem;
+        }
+      }
+    }
+  }
+}
