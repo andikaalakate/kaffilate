@@ -1,7 +1,32 @@
 import { useEffect } from "react";
+import feather from "feather-icons";
 
-const ModalProduct = () => {
+interface Product {
+  id: number;
+  name: string;
+  img: string;
+  price: number;
+  desc: string;
+}
+
+interface ModalProductProps {
+  product: Product;
+}
+
+const ModalProduct = ({
+  product: { id, name, img, price, desc },
+}: ModalProductProps) => {
+  const rupiahConvert = (price: number) => {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigits: 0,
+    }).format(price);
+  };
+
   useEffect(() => {
+    feather.replace();
+    
     const itemDetailModal =
       document.querySelector<HTMLDivElement>("#item-detail-modal");
     const itemDetailButtons = document.querySelectorAll(".item-detail-button");
@@ -20,7 +45,7 @@ const ModalProduct = () => {
     };
 
     itemDetailButtons.forEach((btn) => {
-      btn.addEventListener("click", (e) => { 
+      btn.addEventListener("click", (e) => {
         e.preventDefault();
         modalDisplay();
       });
@@ -44,14 +69,12 @@ const ModalProduct = () => {
           <a href="#" className="close-icon">
             <i data-feather="x"></i>
           </a>
-          <div className="modal-content">
-            <img src="/img/menu/1.webp" alt="Product 1" />
+          <div className="modal-content" key={id}>
+            <img src={`/img/menu/${img}`} alt={name} />
             <div className="product-content">
-              <h3>Coffee 1</h3>
+              <h3>{name}</h3>
               <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic
-                magni tempora ab! Ducimus, nemo voluptas corporis facere
-                sapiente cumque cum perspiciatis ex, ratione officiis soluta.
+                {desc}
               </p>
               <div className="product-stars">
                 <i data-feather="star" className="star-full"></i>
@@ -61,7 +84,7 @@ const ModalProduct = () => {
                 <i data-feather="star"></i>
               </div>
               <div className="product-price">
-                IDR 30K <span>IDR 55K</span>
+                {rupiahConvert(price)}
               </div>
               <a href="#">
                 <i data-feather="shopping-cart"></i>
