@@ -1,0 +1,39 @@
+{
+    "products": [
+        {
+        "id": 1,
+        "name": "Kopi 1",
+        "img": "1.webp",
+        "price": 20000,
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil dolore temporibus reprehenderit voluptatibus. Voluptatem voluptatibus nam magni a tempora dolores."
+      },
+      {
+        "id": 2,
+        "name": "Kopi 2",
+        "img": "2.webp",
+        "price": 40000,
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum tempore consequatur odit minima nisi. Nostrum vero necessitatibus animi unde architecto doloremque sunt ea. Molestias nihil maxime, molestiae culpa nam cupiditate!"
+      },
+      {
+        "id": 3,
+        "name": "Kopi 3",
+        "img": "3.webp",
+        "price": 60000,
+        "desc": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos iure vero reiciendis magnam, non iste? Aliquam odit, magnam ab harum nobis excepturi odio expedita assumenda veritatis numquam quam ullam exercitationem quos magni beatae recusandae earum? At, ullam distinctio? Quem enim magnam quia corrupti, quos totam temporibus odio eos laborum! Eius."
+      },
+      {
+        "id": 4,
+        "name": "Kopi 4",
+        "img": "4.webp",
+        "price": 80000,
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae deleniti dolore tempore vel ipsa eos!"
+      },
+      {
+        "id": 5,
+        "name": "Kopi 5",
+        "img": "5.webp",
+        "price": 100000,
+        "desc": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat, quasi?"
+      }
+    ]
+}

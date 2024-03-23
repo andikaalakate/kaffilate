@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import CartList from "@components/CartList";
 
 const Navbar = () => {
   const [activeLink, setActiveLink] = useState("");
@@ -186,30 +187,7 @@ const Navbar = () => {
         </div>
 
         <div className="shopping-cart">
-          <div className="cart-item">
-            <img src="img/menu/1.webp" alt="Product 1" />
-            <div className="item-detail">
-              <h3>Product 1</h3>
-              <div className="item-price">IDR 30K</div>
-            </div>
-            <i data-feather="trash-2" className="remove-item"></i>
-          </div>
-          <div className="cart-item">
-            <img src="img/menu/1.webp" alt="Product 1" />
-            <div className="item-detail">
-              <h3>Product 1</h3>
-              <div className="item-price">IDR 30K</div>
-            </div>
-            <i data-feather="trash-2" className="remove-item"></i>
-          </div>
-          <div className="cart-item">
-            <img src="img/menu/1.webp" alt="Product 1" />
-            <div className="item-detail">
-              <h3>Product 1</h3>
-              <div className="item-price">IDR 30K</div>
-            </div>
-            <i data-feather="trash-2" className="remove-item"></i>
-          </div>
+          <CartList/>
         </div>
       </nav>
     </>
